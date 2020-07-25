@@ -1,18 +1,12 @@
 // Load data from hours-of-tv-watched.csv
-d3.csv("./COVID_Unemployment.csv").then(function(tvData) {
+d3.csv("./COVID_Unemployment.csv").then(function(data) {
 
-  console.log(tvData);
+  // console.log(data);
 
-  // log a list of names
-  // var names = tvData.map(data => data.name);
-  // console.log("names", names);
+  var states = data.map(data => data.State);
+  console.log("States", states);
 
-  // // Cast each hours value in tvData as a number using the unary + operator
-  // tvData.forEach(function(data) {
-  //   data.hours = +data.hours;
-  //   console.log("Name:", data.name);
-  //   console.log("Hours:", data.hours);
-  // });
+
 }).catch(function(error) {
   console.log(error);
 });
@@ -52,8 +46,16 @@ d3.csv("./COVID_Unemployment.csv").then(function(tvData) {
 //             "translate(" + margin.left + "," + margin.top + ")");
 
 // // Parse the Data
-// const url = "/api/unemployment";
-// d3.json(url).then(function(data), {
+// d3.csv("./COVID_Unemployment.csv").then(function(data) {
+
+//   console.log(data);
+
+// }).catch(function(error) {
+//   console.log(error);
+// });
+
+// // const url = "/api/unemployment";
+// // d3.json(url).then(function(data), {
 // // d3.csv("https://raw.githubusercontent.com/bloy86/Test_D3/master/COVID_Cases_Only-Dates%20Out.csv", function(data) {
 
 
