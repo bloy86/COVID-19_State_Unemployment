@@ -34,6 +34,7 @@ function update(selectedGroup) {
 
     data.forEach(function (data) {
       data.Date = parseTime(data.Date);
+
       // data.InitialClaims = +data.InitialClaims;
       // console.log(typeof data.new_cases_7_day_rolling_avg);
 
@@ -55,8 +56,21 @@ function update(selectedGroup) {
     allKeys = sumstat.map(function (d) { return d.key })
 
     // Add an svg element for each group. The will be one beside each other and will go on the next row when no more room available
+    /*
+    conda create -n covid python=3.6
+    source activate covid | conda activate covid
+    python app.py
+    pip install LIBRARY
+    pip install gunicorn
+    pip freeze >requirements.txt
+    toutch Procfile
+    echo "web: gunicorn covid/app:app" >Procfile
+
+    */
+
+   d3.select("#my_dataviz").html("");
     var svg = d3.select("#my_dataviz")
-      .selectAll("uniqueChart")
+    .selectAll("uniqueChart")
       .data(sumstat)
       .enter()
       .append("svg")
@@ -71,14 +85,19 @@ function update(selectedGroup) {
 
     // Create new data with the selection?
     //var dataFilter = data.map(function(d){return {time: d.Date, value:d[selectedGroup]} })
-
+// https://www.d3indepth.com/scales/
     // Add X axis --> it is a date format
-    var x = d3.scaleLinear()
+    // var x = d3.scaleLinear()
+    //   .domain(d3.extent(data, function (d) { return d.Date; }))
+    //   .range([0, width]);
+      var x = d3.scaleTime()
       .domain(d3.extent(data, function (d) { return d.Date; }))
       .range([0, width]);
+
     svg
       .append("g")
       .attr("transform", "translate(0," + height + ")")
+      .attr("class", "axisBottom")
       .call(d3.axisBottom(x).ticks(3));
 
 
