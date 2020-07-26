@@ -60,6 +60,10 @@ Unemployment_Data = Base.classes.COVID_Unemployment
 def home():
     return render_template("index.html")
 
+# @app.route("/COVIDUnemployment")
+# def dataroute():
+#     return render_template("COVIDUnemployment.html")
+
 
 # # Query the database and send the jsonified results
 # @app.route("/send", methods=["GET", "POST"])

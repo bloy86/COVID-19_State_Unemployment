@@ -8,7 +8,17 @@ var margin = { top: 30, right: 0, bottom: 30, left: 50 },
   height = 210 - margin.top - margin.bottom;
 
 // List of groups (here I have one group per column)
-var allGroup = ["new_cases_7_day_rolling_avg", "InitialClaims", "ContinuedClaims", "InsuredUnemploymentRate"]
+var allGroup = ["cumulative_cases", 
+"cumulative_cases_per_100_000", 
+"cumulative_deaths", 
+"cumulative_deaths_per_100_000", 
+"new_cases_7_day_rolling_avg",
+"new_cases_per_100_000",
+"new_deaths_7_day_rolling_avg",
+"new_deaths_per_100_000",
+"InitialClaims", 
+"ContinuedClaims", 
+"InsuredUnemploymentRate"]
 
 // add the options to the button
 d3.select("#selectButton")
@@ -149,4 +159,4 @@ function update(selectedGroup) {
 
 }
 
-update("new_cases_7_day_rolling_avg")
+update("cumulative_cases")
