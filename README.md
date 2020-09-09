@@ -3,8 +3,7 @@
 #### -- Project Status: Completed
 
 ## Project Objective
-The purpose of this project was to better understand the relationship between COVID-19 cases and unemployment claims across different states.  During the COVID-19 pandemic, states have used decidedly different strategies to either minimize new COVID-19 cases, or keep their businesses open.  We wanted to understand, using visualizations, if cases with high numbers of unemployment claims had fewer cases, or if there was not a relationship between cases and claims.
-
+The purpose of this project was to better understand the relationship between COVID-19 cases and unemployment claims across different states.  During the COVID-19 pandemic, states have used different strategies to either minimize new COVID-19 cases, or keep their businesses open.  We wanted to understand, using visualizations, if cases with high numbers of unemployment claims had fewer cases, or if there was not a relationship between COVID-19 cases and unemployment claims.
 
 ### Methods Used
 * Interactive Data Visualization
@@ -20,22 +19,9 @@ The purpose of this project was to better understand the relationship between CO
 
 
 ## Project Description
-Data on COVID-19 cases and deaths were pulled from the Johns Hopkings COVID-19 Case Tracker, which is a dataset on data.world used by The Associated Press' data team (https://data.world/associatedpress/johns-hopkins-coronavirus-case-tracker). We obtained unemployment claims data from the United States Department of Labor (https://oui.doleta.gov/unemploy/claims.asp).  
+Data on COVID-19 cases and deaths were pulled from the Johns Hopkings COVID-19 Case Tracker, which is a public dataset on data.world used by The Associated Press' data team (https://data.world/associatedpress/johns-hopkins-coronavirus-case-tracker). We obtained unemployment claims data from the United States Department of Labor (https://oui.doleta.gov/unemploy/claims.asp).  Since unemployment data is reported once per week on Saturday, we joined the COVID-19 case data to the unemployment data on date, leaving us with just one row of data per week.  We only used 7-day rolling averages or cumulative numbers for COVID-19 cases and deaths, so as not to only include new cases and deaths that were reported on Saturdays.  Our data spanned 23 weeks, from February 1, 2020 - July 4, 2020.  As we had data for 50 states, plus the District of Columbia, our dataset was 1,173 rows.  
 
-Based on the time of the project (early July 2020) and the time when Coronavirus cases were identifed in the United States, we extracted data from February 1, 
-
-I pulled data from Redfin of single-family homes that sold in the last 6 months within Portland, Oregon.  The pull was completed on August 20, 2020 so we had homes that sold February 24-August 20, 2020.  Redfin limits data pulls to 250 homes, so I needed to complete a pull for each Portland zip code to get a full dataset of Portland.  After dropping outliers and homes missing descriptive variables, we had a dataset of 2,294 homes and 12 possible predictor variables, plus the selling price. 
-
-Our initial model included the following variables:
-* Number of bedrooms
-* Number of bathrooms
-* Square feet of home
-* Square feet of the lot
-* Year the home was built
-
-Our initial model scores were low.  I parsed the existing address variable to create several new variables, which improved the model score. These variables were:
-* Westside/Eastside location – Homes on the west side of the Willamette river tend to have better views of the Cascade mountain range, but also have higher property taxes, both of which may impact selling price.
-* Numbered/Alphabetical street – In Portland, numbered streets (e.g., NE 22nd) run North-South and tend to be quieter, whereas alphabetical streets (e.g, NE Halsey) run East-West and are often busier, multi-lane travel corridors. The busyness or quietness of a street could impact home value.
+We decided to look at 11 different variables, which you can see on the drop-down menu [here](https://bamb-project3.herokuapp.com/).  We determined the best way to display our data would be with small multiple area charts, where data for each state is displayed with a single chart.  Then the drop-down menu is used to change the variable displayed by each chart.  Interestingly, the New York Times has used a similar format to display trajectories of COVID-19 cases by state.
 
 We initially hypothesized that there would be relationships between new COVID-19 cases and unemployment by state.  For example, as new states had surges in COVID-19 cases, lockdowns would occur and unemployment would go up.  Or states would remain locked down, keeping unmeployment high but new COVID-19 cases low. 
 
