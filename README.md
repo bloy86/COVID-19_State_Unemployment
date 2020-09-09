@@ -7,21 +7,23 @@ The purpose of this project was to better understand the relationship between CO
 
 
 ### Methods Used
-* Machine Learning
-* Data Visualization
-* Predictive Modeling
+* Interactive Data Visualization
 
 ### Technologies
-* Python
-* Pandas, jupyter, scikit-learn 
+* Python Flask
 * Javascript
 * D3
+* SQLite
 * HTML
 * CSS
 * Heroku
 
 
 ## Project Description
+Data on COVID-19 cases and deaths were pulled from the Johns Hopkings COVID-19 Case Tracker, which is a dataset on data.world used by The Associated Press' data team (https://data.world/associatedpress/johns-hopkins-coronavirus-case-tracker). We obtained unemployment claims data from the United States Department of Labor (https://oui.doleta.gov/unemploy/claims.asp).  
+
+Based on the time of the project (early July 2020) and the time when Coronavirus cases were identifed in the United States, we extracted data from February 1, 
+
 I pulled data from Redfin of single-family homes that sold in the last 6 months within Portland, Oregon.  The pull was completed on August 20, 2020 so we had homes that sold February 24-August 20, 2020.  Redfin limits data pulls to 250 homes, so I needed to complete a pull for each Portland zip code to get a full dataset of Portland.  After dropping outliers and homes missing descriptive variables, we had a dataset of 2,294 homes and 12 possible predictor variables, plus the selling price. 
 
 Our initial model included the following variables:
@@ -50,7 +52,7 @@ But there were a few notable exceptions.  Florida had a large drop in their insu
 ## Deliverables
 * [Application](https://bamb-project3.herokuapp.com/)
 * Visit the application linked above.   Change the variable in the drop-down menu to see how states varied over time in COVID-19 cases, deaths, and new unemployment claims. 
-![](images/COVID_App_Landing_Page.png)
+
 
 
 ## Team Members
