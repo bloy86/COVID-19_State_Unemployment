@@ -38,18 +38,19 @@ Our initial model scores were low.  I parsed the existing address variable to cr
 We initially hypothesized that there would be relationships between new COVID-19 cases and unemployment by state.  For example, as new states had surges in COVID-19 cases, lockdowns would occur and unemployment would go up.  Or states would remain locked down, keeping unmeployment high but new COVID-19 cases low. 
 
 When we inspected the visualizations, we did not consistently see that relationship.  There were spikes in unemployment in Apri across nearly all states as shutdowns occurred. See the figures below of initial unemployment claims.
-![](machine%20learning%20code/Home%20Price%20App.png)
+![](images/Initial_Unemployment_Claims.png)
 
-For almost all states, unemployment stayed high (see InsuredUnemploymentRate variable in dropdown) into July 2020, as seen by the figures depicting insured unemployment rate below.
-![](machine%20learning%20code/Home%20Price%20App.png)
+For almost all states, unemployment stayed high into July 2020, as seen by the figures depicting insured insured unemployment rate by below.
+![](images/Insured_Unemployment_Rate.png)
 
 But there were a few notable exceptions.  Florida had a large drop in their insured unemployment rate in late May (see above), and also had a subsequent jump in new COVID-19 cases in June (see below).  This example does suggest that Florida's decision to reopoen their economy, as evidenced by the drop in unemployment, may have contributed to a large rise in cases seen within the next month. 
-![](machine%20learning%20code/Home%20Price%20App.png)
+![](images/New_COVID_Cases.png)
 
 
 ## Deliverables
 * [Application](https://bamb-project3.herokuapp.com/)
 * Visit the application linked above.   Change the variable in the drop-down menu to see how states varied over time in COVID-19 cases, deaths, and new unemployment claims. 
+![](images/COVID_App_Landing_Page.png)
 
 
 ## Team Members
